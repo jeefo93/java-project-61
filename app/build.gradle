@@ -20,5 +20,9 @@ application {
 }
 
 compileJava {
-    options.release = 20
+    options.release = 20 as Property<Integer>
+}
+
+run {
+    standardInput = System.in
 }
