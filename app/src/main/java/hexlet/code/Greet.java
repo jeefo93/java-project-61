@@ -4,10 +4,9 @@ import engine.Console;
 
 public class Greet {
     public static void printList(String welcomeMsg,
-         int firstNum, String firstName,
-         int lastNum, String lastName,
-         String[] list, int listStartNum, int listEndNum, String separator
-    ) {
+                                int firstNum, String firstName,
+                                int lastNum, String lastName,
+                                String[] list, int listStartNum, int listEndNum, String separator) {
 
         Console.writeMessage(welcomeMsg);
         Console.writeMessage(firstNum + separator + firstName);
@@ -17,10 +16,13 @@ public class Greet {
         Console.writeMessage(lastNum + separator + lastName);
     }
 
-    public static String requestUserName(String welcomeMsg, String prompt, String greet, String endLine) {
+    public static String requestUserName(String welcomeMsg,
+                                         String prompt,
+                                         String greetStart, String greetEnd) {
+
         Console.writeMessage(welcomeMsg);
         String userName = Console.readStr(prompt);
-        Console.writeMessage(greet + userName + endLine);
+        Console.writeMessage(greetStart + userName + greetEnd);
         return userName;
     }
 }
