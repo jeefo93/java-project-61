@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) {
 
         String[] gameList = Invoker.getGameList();
-        int lastAvailableChoiceNumber = gameList.length + 1;
+        int gameListEndNumber = gameList.length + 1;
 
         int exitChoiceNumber = 0;
         int greetChoiceNumber = 1;
@@ -17,7 +17,7 @@ public class App {
                 "Please enter the game number and press Enter.",
                 greetChoiceNumber, "Greet",
                 exitChoiceNumber, "Exit",
-                gameList, gameListStartNumber, lastAvailableChoiceNumber, " - "
+                gameList, gameListStartNumber, gameListEndNumber, " - "
         );
 
         int userChoice = Console.readInt("Your choice: ");
@@ -25,14 +25,14 @@ public class App {
         if (userChoice == exitChoiceNumber) {
             Console.writeMessage("Good bye!");
 
-        } else if (userChoice < exitChoiceNumber || userChoice > lastAvailableChoiceNumber) {
+        } else if (userChoice < exitChoiceNumber || userChoice > gameListEndNumber) {
             Console.writeMessage("There is no game with the given number.");
 
         } else {
             String userName = Greet.requestUserName(
                     "Welcome to the Brain Games!",
                     "May I have your name? ",
-                    "Hello, "
+                    "Hello, ", "!"
             );
             if (userChoice != greetChoiceNumber) {
                 String gameName = gameList[userChoice - gameListStartNumber];

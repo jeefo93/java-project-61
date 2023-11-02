@@ -17,10 +17,10 @@ public class Greet {
         Console.writeMessage(lastNum + separator + lastName);
     }
 
-    public static String requestUserName(String welcomeMsg, String prompt, String greet) {
+    public static String requestUserName(String welcomeMsg, String prompt, String greet, String endLine) {
         Console.writeMessage(welcomeMsg);
         String userName = Console.readStr(prompt);
-        Console.writeMessage(greet + userName + "!");
+        Console.writeMessage(greet + userName + endLine);
         return userName;
     }
 }
