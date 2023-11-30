@@ -5,12 +5,11 @@ public class Games {
 
         var roundData = new String[3][2];
         var rules = "";
-        boolean onlyGreet = false;
 
         switch (gameNumber) {
 
             case "1":
-                onlyGreet = true;
+                rules = "Greet";
                 break;
 
             case "2":
@@ -26,7 +25,7 @@ public class Games {
                 break;
         }
 
-        if (onlyGreet || ! rules.isEmpty()) {
+        if (! rules.isEmpty()) {
             Engine.run(roundData, rules);
         }
     }
