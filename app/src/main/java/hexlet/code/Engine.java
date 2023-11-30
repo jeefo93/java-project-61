@@ -32,7 +32,7 @@ public class Engine {
                     break;
                 }
             }
-            scanner.close();
         }
+        scanner.close();
     }
 }
