@@ -19,12 +19,16 @@ public class Engine {
                 System.out.print("Your answer: ");
                 String answer = scanner.next();
                 if (answer.equals(roundData[i][1])) {
-                    System.out.println(i != lastRoundNum ? "Correct!" : "Correct!\nCongratulations, " + userName + "!");
+                    System.out.println("Correct!" +
+                                       (i != lastRoundNum ? "" :
+                                               "\nCongratulations, " + userName + "!")
+                    );
                 } else {
                     System.out.println("'" + answer + "' " +
                                        "is wrong answer ;(. Correct answer was '" +
-                                       roundData[i][1] + "'.\n"+
-                                       "Let's try again, " + userName + "!");
+                                       roundData[i][1] + "'.\n" +
+                                       "Let's try again, " + userName + "!"
+                    );
                     break;
                 }
             }
