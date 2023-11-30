@@ -25,7 +25,7 @@ public class Games {
                 break;
         }
 
-        if (! rules.isEmpty()) {
+        if (!rules.isEmpty()) {
             Engine.run(roundData, rules);
         }
     }
