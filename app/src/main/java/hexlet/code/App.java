@@ -1,46 +1,21 @@
 package hexlet.code;
 
-import engine.Console;
-import games.Invoker;
-
+import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
 
-        String[] gameList = Invoker.getGameList();
-        int gameListEndNumber = gameList.length + 1;
-
-        int exitChoiceNumber = 0;
-        int greetChoiceNumber = 1;
-        int gameListStartNumber = 2;
-
-        Greet.printList(
-                "Please enter the game number and press Enter.",
-                greetChoiceNumber, "Greet",
-                exitChoiceNumber, "Exit",
-                gameList, gameListStartNumber, gameListEndNumber, " - "
+        System.out.println("""
+                            Please enter the game number and press Enter.\s
+                            1 - Greet\s
+                            2 - Even\s
+                            0 - Exit\s
+                            """
         );
 
-        int userChoice = Console.readInt("Your choice: ");
-
-        if (userChoice == exitChoiceNumber) {
-            Console.writeMessage("Good bye!");
-
-        } else if (userChoice < exitChoiceNumber || userChoice > gameListEndNumber) {
-            Console.writeMessage("There is no game with the given number.");
-
-        } else {
-            String userName = Greet.requestUserName(
-                    "Welcome to the Brain Games!",
-                    "May I have your name? ",
-                    "Hello, ", "!"
-            );
-            if (userChoice != greetChoiceNumber) {
-                String gameName = gameList[userChoice - gameListStartNumber];
-                boolean userWon = Invoker.playGame(gameName);
-                String exitMessage = userWon ? "Congratulations, " : "Let's try again, ";
-                Console.writeMessage(exitMessage + userName + "!");
-            }
-
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Your choice: ");
+        String userChoice = scanner.next();
+        Games.playGame(userChoice);
+        scanner.close();
     }
 }
