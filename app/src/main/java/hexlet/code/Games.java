@@ -1,9 +1,12 @@
 package hexlet.code;
 
+import hexlet.code.content.*;
+
 public class Games {
     public static void playGame(String gameNumber) {
 
-        var roundData = new String[3][2];
+        var roundCount = 3;
+        var roundData = new String[roundCount][2];
         var rules = "";
 
         switch (gameNumber) {
@@ -13,12 +16,8 @@ public class Games {
                 break;
 
             case "2":
-                rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-                for (var i = 0; i < roundData.length; i++) {
-                    int random_int = (int)Math.floor(Math.random() * 100);
-                    roundData[i][0] = String.valueOf(random_int);
-                    roundData[i][1] = ((random_int % 2) == 0) ? "yes" : "no";
-                }
+                rules = Even.getRules();
+                roundData = Even.generateRoundData(roundCount);
                 break;
 
             default:

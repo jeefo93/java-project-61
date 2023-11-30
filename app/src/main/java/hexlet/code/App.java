@@ -5,11 +5,10 @@ public class App {
     public static void main(String[] args) {
 
         System.out.println("""
-                            Please enter the game number and press Enter.\s
-                            1 - Greet\s
-                            2 - Even\s
-                            0 - Exit\s
-                            """
+                            Please enter the game number and press Enter.
+                            1 - Greet
+                            2 - Even
+                            0 - Exit"""
         );
 
         Scanner scanner = new Scanner(System.in);
