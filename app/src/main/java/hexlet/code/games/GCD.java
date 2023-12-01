@@ -1,10 +1,6 @@
 package hexlet.code.games;
 
 public class GCD {
-    public static String getRules() {
-        return "Find the greatest common divisor of given numbers.";
-    }
-
     private static int getGcd(int intA, int intB) {
         int gcd = 1;
         for (int i = Math.min(intA, intB); i > 1; i--) {
