@@ -3,12 +3,20 @@ package hexlet.code.games;
 public class GCD {
     private static int getGcd(int intA, int intB) {
         int gcd = 1;
-        for (int i = Math.min(intA, intB); i > 1; i--) {
+        int minInt = Math.min(intA, intB);
+        int maxInt = Math.max(intA, intB);
+
+        if (minInt == 0 && maxInt != 0) {
+            return maxInt;
+        }
+
+        for (int i = minInt; i > gcd; i--) {
             if (intA % i == 0 && intB % i == 0) {
                 gcd = i;
                 break;
             }
         }
+
         return gcd;
     }
 
