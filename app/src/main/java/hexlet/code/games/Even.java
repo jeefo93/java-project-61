@@ -1,4 +1,4 @@
-package hexlet.code.content;
+package hexlet.code.games;
 
 public class Even {
     public static String getRules() {

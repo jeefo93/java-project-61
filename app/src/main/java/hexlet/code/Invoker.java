@@ -1,8 +1,8 @@
 package hexlet.code;
 
-import hexlet.code.content.*;
+import hexlet.code.games.*;
 
-public class Games {
+public class Invoker {
     public static void playGame(String gameNumber) {
 
         var roundCount = 3;
@@ -18,6 +18,11 @@ public class Games {
             case "2":
                 rules = Even.getRules();
                 roundData = Even.generateRoundData(roundCount);
+                break;
+
+            case "3":
+                rules = Calc.getRules();
+                roundData = Calc.generateRoundData(roundCount);
                 break;
 
             default:
