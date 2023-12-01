@@ -8,13 +8,14 @@ public class App {
                             Please enter the game number and press Enter.
                             1 - Greet
                             2 - Even
+                            3 - Calc
                             0 - Exit"""
         );
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
         String userChoice = scanner.next();
-        Games.playGame(userChoice);
+        Invoker.playGame(userChoice);
         scanner.close();
     }
 }
