@@ -25,6 +25,11 @@ public class Invoker {
                 roundData = Calc.generateRoundData(roundCount);
                 break;
 
+            case "4":
+                rules = GCD.getRules();
+                roundData = GCD.generateRoundData(roundCount);
+                break;
+
             default:
                 break;
         }
