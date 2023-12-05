@@ -6,11 +6,11 @@ public class Calc {
 
         for (var i = 0; i < roundCount; i++) {
 
-            int int1 = (int)Math.floor(Math.random() * 100);
-            int int2 = (int)Math.floor(Math.random() * 100);
+            int int1 = (int)(Math.random() * 100);
+            int int2 = (int)(Math.random() * 100);
 
             String action = "";
-            int actionNumber = (int)Math.floor(Math.random() * 3);
+            int actionNumber = (int)(Math.random() * 2);
 
             int actionResult = switch (actionNumber) {
                 case 0 -> {
