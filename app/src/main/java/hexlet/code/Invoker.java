@@ -29,7 +29,7 @@ public class Invoker {
                 rules = "Find the greatest common divisor of given numbers.";
                 roundData = GCD.generateRoundData(roundCount);
                 break;
-
+            
             default:
                 break;
         }
