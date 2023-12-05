@@ -13,7 +13,6 @@ public class GCD {
         for (int i = minInt; i > gcd; i--) {
             if (intA % i == 0 && intB % i == 0) {
                 gcd = i;
-                break;
             }
         }
 

@@ -18,7 +18,6 @@ public class Engine {
         System.out.println(rules);
         var lastRoundNum = roundData.length - 1;
         for (var i = 0; i <= lastRoundNum; i++) {
-
             System.out.println("Question: " + roundData[i][0]);
             System.out.print("Your answer: ");
             String answer = scanner.next();
@@ -31,12 +30,10 @@ public class Engine {
                 );
                 break;
             }
-
             System.out.println("Correct!" +
                                (i != lastRoundNum ? "" :
                                        "\nCongratulations, " + userName + "!")
             );
-
         }
         scanner.close();
     }
