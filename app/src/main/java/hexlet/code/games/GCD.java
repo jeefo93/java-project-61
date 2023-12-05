@@ -2,15 +2,11 @@ package hexlet.code.games;
 
 public class GCD {
     private static int getGcd(int intA, int intB) {
+
         int gcd = 1;
-        int minInt = Math.min(intA, intB);
-        int maxInt = Math.max(intA, intB);
+        int max = Math.max(intA, intB);
 
-        if (minInt == 0 && maxInt != 0) {
-            return maxInt;
-        }
-
-        for (int i = minInt; i > gcd; i--) {
+        for (int i = gcd; i <= max; i++) {
             if (intA % i == 0 && intB % i == 0) {
                 gcd = i;
             }
@@ -18,6 +14,7 @@ public class GCD {
 
         return gcd;
     }
+
 
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
