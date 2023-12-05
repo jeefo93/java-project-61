@@ -9,7 +9,7 @@ public class Calc {
             int int1 = (int)(Math.random() * 100);
             int int2 = (int)(Math.random() * 100);
 
-            String action = "";
+            String action;
             int actionNumber = (int)(Math.random() * 2);
 
             int actionResult = switch (actionNumber) {
