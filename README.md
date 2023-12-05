@@ -5,3 +5,5 @@
 Even: [![asciicast](https://asciinema.org/a/hlk27xGGa2ciWenh5DajWwHos.svg)](https://asciinema.org/a/hlk27xGGa2ciWenh5DajWwHos)
 
 Calc: [![asciicast](https://asciinema.org/a/Kz58xZemsuI6k0uOwNdu17PDu.svg)](https://asciinema.org/a/Kz58xZemsuI6k0uOwNdu17PDu)
+
+GCD: [![asciicast](https://asciinema.org/a/4birsnTtkqBppg8MAjcqiI1Sr.svg)](https://asciinema.org/a/4birsnTtkqBppg8MAjcqiI1Sr)

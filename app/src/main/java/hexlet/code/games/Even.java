@@ -1,10 +1,6 @@
 package hexlet.code.games;
 
 public class Even {
-    public static String getRules() {
-        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
-    }
-
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (var i = 0; i < roundCount; i++) {

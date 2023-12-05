@@ -1,10 +1,6 @@
 package hexlet.code.games;
 
 public class Calc {
-    public static String getRules() {
-        return "What is the result of the expression?";
-    }
-
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (var i = 0; i < roundCount; i++) {

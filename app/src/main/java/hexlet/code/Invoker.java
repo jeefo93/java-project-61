@@ -16,15 +16,20 @@ public class Invoker {
                 break;
 
             case "2":
-                rules = Even.getRules();
+                rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
                 roundData = Even.generateRoundData(roundCount);
                 break;
 
             case "3":
-                rules = Calc.getRules();
+                rules = "What is the result of the expression?";
                 roundData = Calc.generateRoundData(roundCount);
                 break;
 
+            case "4":
+                rules = "Find the greatest common divisor of given numbers.";
+                roundData = GCD.generateRoundData(roundCount);
+                break;
+            
             default:
                 break;
         }
