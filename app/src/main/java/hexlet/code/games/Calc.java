@@ -8,9 +8,9 @@ public class Calc {
 
         for (var i = 0; i < roundCount; i++) {
             String action;
-            int intA = MathHelper.getRandomIntInRange(0, MAX_INT_VALUE);
-            int intB = MathHelper.getRandomIntInRange(0, MAX_INT_VALUE);
-            int actionNumber = MathHelper.getRandomIntInRange(0, MAX_ACTION_NUMBER);
+            int intA = (int) (Math.random() * MAX_INT_VALUE);
+            int intB = (int) (Math.random() * MAX_INT_VALUE);
+            int actionNumber = (int) (Math.random() * MAX_ACTION_NUMBER);
 
             int actionResult = switch (actionNumber) {
                 case 0 -> {

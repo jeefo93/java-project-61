@@ -18,8 +18,8 @@ public class GCD {
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            int intA = MathHelper.getRandomIntInRange(0, MAX_INT_VALUE);
-            int intB = MathHelper.getRandomIntInRange(0, MAX_INT_VALUE);
+            int intA = (int) (Math.random() * MAX_INT_VALUE);
+            int intB = (int) (Math.random() * MAX_INT_VALUE);
             roundData[i][0] = intA + " " + intB;
             roundData[i][1] = String.valueOf(getGcd(intA, intB));
         }
