@@ -5,13 +5,11 @@ public class Calc {
         var roundData = new String[roundCount][2];
 
         for (var i = 0; i < roundCount; i++) {
-
             int int1 = (int)(Math.random() * 100);
             int int2 = (int)(Math.random() * 100);
 
             String action;
             int actionNumber = (int)(Math.random() * 3);
-
             int actionResult = switch (actionNumber) {
                 case 0 -> {
                     action = " + ";
