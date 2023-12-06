@@ -25,6 +25,10 @@ public class Invoker {
                 roundData = Progression.generateRoundData(roundCount);
                 yield "What number is missing in the progression?";
             }
+            case "6" -> {
+                roundData = Prime.generateRoundData(roundCount);
+                yield "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+            }
         };
         if (!rules.isEmpty()) {
             Engine.run(roundData, rules);
