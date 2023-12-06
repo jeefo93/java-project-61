@@ -9,6 +9,7 @@ public class Prime {
         }
         return true;
     }
+
     private static int generateNumber(int startFrom, boolean isPrimeNeeded) {
         var resultNumber = startFrom;
         for (int i = resultNumber; i < Integer.MAX_VALUE; i++) {
@@ -19,6 +20,7 @@ public class Prime {
         }
         return resultNumber;
     }
+
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
