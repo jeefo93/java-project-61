@@ -3,7 +3,7 @@ package hexlet.code.games;
 public class Progression {
     private static String[] generateProgressionRound() {
 
-        String[] progression = new String[2];
+        String[] progressionRound = new String[2];
         var progressionString = new StringBuilder();
 
         int length = (int)((Math.random() * 7) + 5); // progression length is between 5 and 12
@@ -15,7 +15,7 @@ public class Progression {
             var slotValue = String.valueOf(currentNumber);
 
             if (i == emptySlotIndex) {
-                progression[1] = slotValue;
+                progressionRound[1] = slotValue;
                 slotValue = "..";
             }
 
@@ -27,8 +27,8 @@ public class Progression {
             }
 
         }
-        progression[0] = progressionString.toString();
-        return progression;
+        progressionRound[0] = progressionString.toString();
+        return progressionRound;
     }
 
     public static String[][] generateRoundData(int roundCount) {
