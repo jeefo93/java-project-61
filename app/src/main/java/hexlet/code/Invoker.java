@@ -6,30 +6,26 @@ public class Invoker {
     public static void playGame(String gameNumber) {
         var roundCount = 3;
         var roundData = new String[roundCount][2];
-        var rules = "";
-
-        switch (gameNumber) {
-            case "1":
-                rules = "Greet";
-                break;
-            case "2":
-                rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        var rules = switch (gameNumber) {
+            default -> "";
+            case "1" -> "Greet";
+            case "2" -> {
                 roundData = Even.generateRoundData(roundCount);
-                break;
-            case "3":
-                rules = "What is the result of the expression?";
+                yield "Answer 'yes' if the number is even, otherwise answer 'no'.";
+            }
+            case "3" -> {
                 roundData = Calc.generateRoundData(roundCount);
-                break;
-            case "4":
-                rules = "Find the greatest common divisor of given numbers.";
+                yield "What is the result of the expression?";
+            }
+            case "4" -> {
                 roundData = GCD.generateRoundData(roundCount);
-                break;
-            case "5":
-                rules = "What number is missing in the progression?";
+                yield "Find the greatest common divisor of given numbers.";
+            }
+            case "5" -> {
                 roundData = Progression.generateRoundData(roundCount);
-            default:
-                break;
-        }
+                yield "What number is missing in the progression?";
+            }
+        };
 
         if (!rules.isEmpty()) {
             Engine.run(roundData, rules);
