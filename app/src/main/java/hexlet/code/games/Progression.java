@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 public class Progression {
-    private static String[] generateProgression() {
+    private static String[] generateProgressionRound() {
 
         String[] progression = new String[2];
         var progressionString = new StringBuilder();
@@ -34,7 +34,7 @@ public class Progression {
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundData[i] = generateProgression();
+            roundData[i] = generateProgressionRound();
         }
         return roundData;
     }
