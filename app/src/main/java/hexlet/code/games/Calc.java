@@ -3,32 +3,31 @@ package hexlet.code.games;
 public class Calc {
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
-
         for (var i = 0; i < roundCount; i++) {
-
             int int1 = (int)(Math.random() * 100);
             int int2 = (int)(Math.random() * 100);
 
             String action;
-            int actionNumber = (int)(Math.random() * 2);
+            int result;
+            int actionNumber = (int)(Math.random() * 3);
 
-            int actionResult = switch (actionNumber) {
-                case 0 -> {
+            switch (actionNumber) {
+                case 0:
                     action = " * ";
-                    yield int1 * int2;
-                }
-                case 1 -> {
+                    result = int1 * int2;
+                    break;
+                case 1:
                     action = " - ";
-                    yield int1 - int2;
-                }
-                default -> {
+                    result = int1 - int2;
+                    break;
+                default:
                     action = " + ";
-                    yield int1 + int2;
-                }
-            };
+                    result = int1 + int2;
+                    break;
+            }
 
             roundData[i][0] = int1 + action + int2;
-            roundData[i][1] = String.valueOf(actionResult);
+            roundData[i][1] = String.valueOf(result);
         }
         return roundData;
     }
