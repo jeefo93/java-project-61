@@ -1,10 +1,14 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 public class Invoker {
     public static void playGame(String gameNumber) {
-        var roundCount = 3;
+        int roundCount = 3;
         var roundData = new String[roundCount][2];
         var rules = switch (gameNumber) {
             default -> "";

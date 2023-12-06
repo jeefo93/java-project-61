@@ -14,10 +14,11 @@ public class GCD {
     }
 
     public static String[][] generateRoundData(int roundCount) {
+        int maxIntValue = 100;
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            int intA = (int)(Math.random() * 100);
-            int intB = (int)(Math.random() * 100);
+            int intA = (int) (Math.random() * maxIntValue);
+            int intB = (int) (Math.random() * maxIntValue);
             roundData[i][0] = intA + " " + intB;
             roundData[i][1] = String.valueOf(getGcd(intA, intB));
         }
