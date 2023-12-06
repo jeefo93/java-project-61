@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 public class Prime {
+
     private static final int MIN_START_VALUE = 1;
     private static final int MAX_START_VALUE = 500;
 

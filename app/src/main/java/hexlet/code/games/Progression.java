@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 public class Progression {
+
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 12;
     private static final int MAX_ADDENDUM_VALUE = 100;
@@ -17,6 +18,7 @@ public class Progression {
         int emptySlotIndex = (int) (Math.random() * (length - 1));
 
         for (int i = 0; i < length; i++) {
+
             var slotValue = String.valueOf(currentNumber);
 
             if (i == emptySlotIndex) {
@@ -32,8 +34,10 @@ public class Progression {
             }
 
         }
+
         progressionRound[0] = progressionString.toString();
         return progressionRound;
+
     }
 
     public static String[][] generateRoundData(int roundCount) {

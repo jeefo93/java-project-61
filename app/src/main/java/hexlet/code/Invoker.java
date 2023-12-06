@@ -7,10 +7,12 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 public class Invoker {
+
     private static final int ROUND_COUNT = 3;
 
     public static void playGame(String gameNumber) {
         var roundData = new String[ROUND_COUNT][2];
+
         var rules = switch (gameNumber) {
             default -> "";
             case "1" -> "Greet";
@@ -35,8 +37,10 @@ public class Invoker {
                 yield "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
             }
         };
+
         if (!rules.isEmpty()) {
             Engine.run(roundData, rules);
         }
+
     }
 }
