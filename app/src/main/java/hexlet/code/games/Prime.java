@@ -10,10 +10,10 @@ public class Prime {
         return true;
     }
 
-    private static int generateNumber(int startFrom, boolean isPrimeNeeded) {
+    private static int generateNumber(int startFrom, boolean mustBePrime) {
         var resultNumber = startFrom;
         for (int i = resultNumber; i < Integer.MAX_VALUE; i++) {
-            if (isPrime(i) == isPrimeNeeded) {
+            if (isPrime(i) == mustBePrime) {
                 resultNumber = i;
                 break;
             }
@@ -25,9 +25,9 @@ public class Prime {
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
             int startFrom = (int)(Math.random() * 500);
-            boolean isPrimeNeeded = (int)(Math.random() * 2) == 0;
-            roundData[i][0] = String.valueOf(generateNumber(startFrom, isPrimeNeeded));
-            roundData[i][1] = isPrimeNeeded ? "yes" : "no";
+            boolean mustBePrime = (int)(Math.random() * 2) == 0;
+            roundData[i][0] = String.valueOf(generateNumber(startFrom, mustBePrime));
+            roundData[i][1] = mustBePrime ? "yes" : "no";
         }
         return roundData;
     }
