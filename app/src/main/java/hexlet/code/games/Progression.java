@@ -1,15 +1,18 @@
 package hexlet.code.games;
 
 public class Progression {
-    private static String[] generateProgressionRound() {
+    private static String[] generateProgressionRound(int minProgressionLength,
+                                                     int maxProgressionLength,
+                                                     int maxAddendumValue,
+                                                     int maxStartNumberValue) {
 
         String[] progressionRound = new String[2];
         var progressionString = new StringBuilder();
 
-        int length = MathHelper.getRandomIntInRange(5, 7);
-        int addendum = MathHelper.getRandomIntInRange(0, 99);
-        int currentNumber = MathHelper.getRandomIntInRange(0, 49);
-        int emptySlotIndex = (int) (Math.random() * (length - 1));
+        int length = MathHelper.getRandomIntInRange(minProgressionLength, maxProgressionLength);
+        int addendum = MathHelper.getRandomIntInRange(0, maxAddendumValue);
+        int currentNumber = MathHelper.getRandomIntInRange(0, maxStartNumberValue);
+        int emptySlotIndex = MathHelper.getRandomIntInRange(0, length - 1);
 
         for (int i = 0; i < length; i++) {
             var slotValue = String.valueOf(currentNumber);
@@ -33,8 +36,13 @@ public class Progression {
 
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
+        var minProgressionLength = 5;
+        var maxProgressionLength = 12;
+        var maxAddendumValue = 100;
+        var maxStartNumberValue = 49;
         for (int i = 0; i < roundCount; i++) {
-            roundData[i] = generateProgressionRound();
+            roundData[i] = generateProgressionRound(minProgressionLength,
+                    maxProgressionLength, maxAddendumValue, maxStartNumberValue);
         }
         return roundData;
     }

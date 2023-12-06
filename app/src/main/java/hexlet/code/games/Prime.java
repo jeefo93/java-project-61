@@ -23,8 +23,10 @@ public class Prime {
 
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
+        var minStartValue = 1;
+        var maxStartValue = 500;
         for (int i = 0; i < roundCount; i++) {
-            int startFrom = MathHelper.getRandomIntInRange(1, 500);
+            int startFrom = MathHelper.getRandomIntInRange(minStartValue, maxStartValue);
             boolean mustBePrime = (int) (Math.random() * 2) == 0;
             roundData[i][0] = String.valueOf(generateNumber(startFrom, mustBePrime));
             roundData[i][1] = mustBePrime ? "yes" : "no";
