@@ -6,8 +6,7 @@ public class Engine {
     public static void run(String[][] roundData, String rules) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\nWelcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.print("\nWelcome to the Brain Games!\nMay I have your name? ");
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
@@ -18,8 +17,7 @@ public class Engine {
         System.out.println(rules);
         int lastRoundNum = roundData.length - 1;
         for (int i = 0; i <= lastRoundNum; i++) {
-            System.out.println("Question: " + roundData[i][0]);
-            System.out.print("Your answer: ");
+            System.out.print("Question: " + roundData[i][0] + "\nYour answer: ");
             String answer = scanner.next();
 
             if (!answer.equals(roundData[i][1])) {
