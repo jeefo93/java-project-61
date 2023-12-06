@@ -7,8 +7,9 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 public class Invoker {
+    private static final int roundCount = 3;
+
     public static void playGame(String gameNumber) {
-        int roundCount = 3;
         var roundData = new String[roundCount][2];
         var rules = switch (gameNumber) {
             default -> "";

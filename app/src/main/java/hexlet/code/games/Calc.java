@@ -1,9 +1,9 @@
 package hexlet.code.games;
 
 public class Calc {
+    private static final int maxIntValue = 100;
+    private static final int maxActionNumber = 3;
     public static String[][] generateRoundData(int roundCount) {
-        var maxIntValue = 100;
-        var maxActionNumber = 3;
         var roundData = new String[roundCount][2];
 
         for (var i = 0; i < roundCount; i++) {

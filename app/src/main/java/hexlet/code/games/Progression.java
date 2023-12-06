@@ -1,10 +1,12 @@
 package hexlet.code.games;
 
 public class Progression {
-    private static String[] generateProgressionRound(int minProgressionLength,
-                                                     int maxProgressionLength,
-                                                     int maxAddendumValue,
-                                                     int maxStartNumberValue) {
+    private static final int minProgressionLength = 5;
+    private static final int maxProgressionLength = 12;
+    private static final int maxAddendumValue = 100;
+    private static final int maxStartNumberValue = 49;
+
+    private static String[] generateProgressionRound() {
 
         String[] progressionRound = new String[2];
         var progressionString = new StringBuilder();
@@ -35,14 +37,9 @@ public class Progression {
     }
 
     public static String[][] generateRoundData(int roundCount) {
-        var minProgressionLength = 5;
-        var maxProgressionLength = 12;
-        var maxAddendumValue = 100;
-        var maxStartNumberValue = 49;
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundData[i] = generateProgressionRound(minProgressionLength,
-                    maxProgressionLength, maxAddendumValue, maxStartNumberValue);
+            roundData[i] = generateProgressionRound();
         }
         return roundData;
     }

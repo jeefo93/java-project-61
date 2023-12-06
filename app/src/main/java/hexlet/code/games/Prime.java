@@ -1,6 +1,9 @@
 package hexlet.code.games;
 
 public class Prime {
+    private static final int minStartValue = 1;
+    private static final int maxStartValue = 500;
+
     private static boolean isPrime(int number) {
         for (int i = 2; i <= number / 2; ++i) {
             if (number % i == 0) {
@@ -22,8 +25,6 @@ public class Prime {
     }
 
     public static String[][] generateRoundData(int roundCount) {
-        var minStartValue = 1;
-        var maxStartValue = 500;
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
             int startFrom = MathHelper.getRandomIntInRange(minStartValue, maxStartValue);

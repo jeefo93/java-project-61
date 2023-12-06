@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
 public class GCD {
+    private static final int maxIntValue = 100;
+
     private static int getGcd(int intA, int intB) {
         int max = Math.max(intA, intB);
         int gcd = (max == 0) ? 0 : 1;
@@ -14,7 +16,6 @@ public class GCD {
     }
 
     public static String[][] generateRoundData(int roundCount) {
-        var maxIntValue = 100;
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
             int intA = MathHelper.getRandomIntInRange(0, maxIntValue);
