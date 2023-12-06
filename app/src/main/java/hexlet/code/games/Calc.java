@@ -9,7 +9,6 @@ public class Calc {
         var roundData = new String[roundCount][2];
 
         for (var i = 0; i < roundCount; i++) {
-
             String action;
             int intA = (int) (Math.random() * MAX_INT_VALUE);
             int intB = (int) (Math.random() * MAX_INT_VALUE);

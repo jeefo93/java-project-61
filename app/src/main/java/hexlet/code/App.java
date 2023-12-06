@@ -21,5 +21,6 @@ public class App {
         String userChoice = scanner.next();
         Invoker.playGame(userChoice);
         scanner.close();
+
     }
 }
