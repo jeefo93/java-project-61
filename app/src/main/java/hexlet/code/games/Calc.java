@@ -1,16 +1,16 @@
 package hexlet.code.games;
 
 public class Calc {
-    private static final int maxIntValue = 100;
-    private static final int maxActionNumber = 3;
+    private static final int MAX_INT_VALUE = 100;
+    private static final int MAX_ACTION_NUMBER = 3;
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
 
         for (var i = 0; i < roundCount; i++) {
             String action;
-            int intA = MathHelper.getRandomIntInRange(0, maxIntValue);
-            int intB = MathHelper.getRandomIntInRange(0, maxIntValue);
-            int actionNumber = MathHelper.getRandomIntInRange(0, maxActionNumber);
+            int intA = MathHelper.getRandomIntInRange(0, MAX_INT_VALUE);
+            int intB = MathHelper.getRandomIntInRange(0, MAX_INT_VALUE);
+            int actionNumber = MathHelper.getRandomIntInRange(0, MAX_ACTION_NUMBER);
 
             int actionResult = switch (actionNumber) {
                 case 0 -> {

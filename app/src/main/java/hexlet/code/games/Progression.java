@@ -1,19 +1,19 @@
 package hexlet.code.games;
 
 public class Progression {
-    private static final int minProgressionLength = 5;
-    private static final int maxProgressionLength = 12;
-    private static final int maxAddendumValue = 100;
-    private static final int maxStartNumberValue = 49;
+    private static final int MIN_PROGRESSION_LENGTH = 5;
+    private static final int MAX_PROGRESSION_LENGTH = 12;
+    private static final int MAX_ADDENDUM_VALUE = 100;
+    private static final int MAX_START_NUMBER_VALUE = 49;
 
     private static String[] generateProgressionRound() {
 
         String[] progressionRound = new String[2];
         var progressionString = new StringBuilder();
 
-        int length = MathHelper.getRandomIntInRange(minProgressionLength, maxProgressionLength);
-        int addendum = MathHelper.getRandomIntInRange(0, maxAddendumValue);
-        int currentNumber = MathHelper.getRandomIntInRange(0, maxStartNumberValue);
+        int length = MathHelper.getRandomIntInRange(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
+        int addendum = MathHelper.getRandomIntInRange(0, MAX_ADDENDUM_VALUE);
+        int currentNumber = MathHelper.getRandomIntInRange(0, MAX_START_NUMBER_VALUE);
         int emptySlotIndex = MathHelper.getRandomIntInRange(0, length - 1);
 
         for (int i = 0; i < length; i++) {
