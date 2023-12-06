@@ -5,29 +5,29 @@ public class Calc {
         var roundData = new String[roundCount][2];
 
         for (var i = 0; i < roundCount; i++) {
-            int int1 = (int)(Math.random() * 100);
-            int int2 = (int)(Math.random() * 100);
-
             String action;
+            int intA = (int)(Math.random() * 100);
+            int intB = (int)(Math.random() * 100);
             int actionNumber = (int)(Math.random() * 3);
+
             int actionResult = switch (actionNumber) {
                 case 0 -> {
                     action = " + ";
-                    yield int1 + int2;
+                    yield intA + intB;
                 }
                 case 1 -> {
                     action = " - ";
-                    yield int1 - int2;
+                    yield intA - intB;
                 }
                 default -> {
                     action = " * ";
-                    yield int1 * int2;
+                    yield intA * intB;
                 }
             };
-
-            roundData[i][0] = int1 + action + int2;
+            roundData[i][0] = intA + action + intB;
             roundData[i][1] = String.valueOf(actionResult);
         }
+
         return roundData;
     }
 }

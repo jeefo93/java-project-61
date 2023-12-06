@@ -26,7 +26,6 @@ public class Invoker {
                 yield "What number is missing in the progression?";
             }
         };
-
         if (!rules.isEmpty()) {
             Engine.run(roundData, rules);
         }
