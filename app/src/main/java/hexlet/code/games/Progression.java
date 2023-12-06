@@ -15,15 +15,17 @@ public class Progression {
             var currentMember = String.valueOf(currentNumber);
 
             if (i == emptySlotNumber) {
+                progression[1] = currentMember;
                 currentMember = "..";
-                progression[1] = String.valueOf(currentNumber);
             }
+
             progressionString.append(currentMember);
 
             if (i < (rangeLength - 1)) {
                 progressionString.append(" ");
                 currentNumber += addendum;
             }
+
         }
         progression[0] = progressionString.toString();
         return progression;
