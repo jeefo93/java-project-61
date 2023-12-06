@@ -11,9 +11,7 @@ public class Engine {
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
-        if (roundData[0][0] == null) {
-            return;
-        }
+        if (roundData[0][0] == null) return;
 
         System.out.println(rules);
         var lastRoundNum = roundData.length - 1;
@@ -24,10 +22,8 @@ public class Engine {
 
             if (!answer.equals(roundData[i][1])){
                 System.out.println("'" + answer + "' " +
-                        "is wrong answer ;(. Correct answer was '" +
-                        roundData[i][1] + "'.\n" +
-                        "Let's try again, " + userName + "!"
-                );
+                        "is wrong answer ;(. Correct answer was '" + roundData[i][1] + "'.\n" +
+                        "Let's try again, " + userName + "!");
                 break;
             }
             System.out.println("Correct!" +
