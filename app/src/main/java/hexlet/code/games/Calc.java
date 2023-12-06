@@ -10,20 +10,20 @@ public class Calc {
             int int2 = (int)(Math.random() * 100);
 
             String action;
-            int actionNumber = (int)(Math.random() * 2);
+            int actionNumber = (int)(Math.random() * 3);
 
             int actionResult = switch (actionNumber) {
                 case 0 -> {
-                    action = " * ";
-                    yield int1 * int2;
+                    action = " + ";
+                    yield int1 + int2;
                 }
                 case 1 -> {
                     action = " - ";
                     yield int1 - int2;
                 }
                 default -> {
-                    action = " + ";
-                    yield int1 + int2;
+                    action = " * ";
+                    yield int1 * int2;
                 }
             };
 
