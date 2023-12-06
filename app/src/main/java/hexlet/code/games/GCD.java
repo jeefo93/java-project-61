@@ -5,7 +5,6 @@ public class GCD {
     private static final int MAX_INT_VALUE = 100;
 
     private static int getGcd(int intA, int intB) {
-
         int max = Math.max(intA, intB);
         int gcd = (max == 0) ? 0 : 1;
 
