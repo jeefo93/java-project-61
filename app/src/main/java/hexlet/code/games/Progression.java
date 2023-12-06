@@ -35,11 +35,11 @@ public class Progression {
     }
 
     public static String[][] generateRoundData(int roundCount) {
-        var roundData = new String[roundCount][2];
         var minProgressionLength = 5;
         var maxProgressionLength = 12;
         var maxAddendumValue = 100;
         var maxStartNumberValue = 49;
+        var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
             roundData[i] = generateProgressionRound(minProgressionLength,
                     maxProgressionLength, maxAddendumValue, maxStartNumberValue);
