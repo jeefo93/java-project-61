@@ -29,7 +29,11 @@ public class Invoker {
                 rules = "Find the greatest common divisor of given numbers.";
                 roundData = GCD.generateRoundData(roundCount);
                 break;
-            
+
+            case "5":
+                rules = "What number is missing in the progression?";
+                roundData = Progression.generateRoundData(roundCount);
+
             default:
                 break;
         }

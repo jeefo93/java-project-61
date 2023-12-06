@@ -7,3 +7,5 @@ Even: [![asciicast](https://asciinema.org/a/hlk27xGGa2ciWenh5DajWwHos.svg)](http
 Calc: [![asciicast](https://asciinema.org/a/Kz58xZemsuI6k0uOwNdu17PDu.svg)](https://asciinema.org/a/Kz58xZemsuI6k0uOwNdu17PDu)
 
 GCD: [![asciicast](https://asciinema.org/a/4birsnTtkqBppg8MAjcqiI1Sr.svg)](https://asciinema.org/a/4birsnTtkqBppg8MAjcqiI1Sr)
+
+Progression: [![asciicast](https://asciinema.org/a/MaK0cdcWMOMf2qFvbktSW3PU9.svg)](https://asciinema.org/a/MaK0cdcWMOMf2qFvbktSW3PU9)
