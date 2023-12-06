@@ -3,14 +3,12 @@ package hexlet.code.games;
 public class Calc {
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
-        int maxIntValue = 100;
-        int maxActionNumber = 3;
 
         for (var i = 0; i < roundCount; i++) {
             String action;
-            int intA = (int) (Math.random() * maxIntValue);
-            int intB = (int) (Math.random() * maxIntValue);
-            int actionNumber = (int) (Math.random() * maxActionNumber);
+            int intA = MathHelper.getRandomIntInRange(0, 100);
+            int intB = MathHelper.getRandomIntInRange(0, 100);
+            int actionNumber = MathHelper.getRandomIntInRange(0, 3);
 
             int actionResult = switch (actionNumber) {
                 case 0 -> {
