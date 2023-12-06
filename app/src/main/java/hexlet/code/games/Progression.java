@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 public class Progression {
     private static String[] generateProgressionRound(int[] lengthRange,
-                                                     int [] addendumRange,
-                                                     int [] startNumberRange) {
+                                                     int[] addendumRange,
+                                                     int[] startNumberRange) {
 
         String[] progressionRound = new String[2];
         var progressionString = new StringBuilder();

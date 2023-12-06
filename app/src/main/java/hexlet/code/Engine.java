@@ -29,8 +29,8 @@ public class Engine {
                 break;
             }
             System.out.println("Correct!"
-                               + (i != lastRoundNum ? "" :
-                                       "\nCongratulations, " + userName + "!")
+                               + (i != lastRoundNum ? ""
+                                       : "\nCongratulations, " + userName + "!")
             );
         }
         scanner.close();
