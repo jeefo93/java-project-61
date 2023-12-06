@@ -14,7 +14,7 @@ public class Engine {
         if (roundData[0][0] == null) return;
 
         System.out.println(rules);
-        var lastRoundNum = roundData.length - 1;
+        int lastRoundNum = roundData.length - 1;
         for (int i = 0; i <= lastRoundNum; i++) {
             System.out.println("Question: " + roundData[i][0]);
             System.out.print("Your answer: ");

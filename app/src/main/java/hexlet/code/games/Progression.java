@@ -7,19 +7,19 @@ public class Progression {
         var progressionString = new StringBuilder();
 
         int progressionLength = (int)((Math.random() * 7) + 5); // progression length is between 5 and 12
-        int currentNumber = (int)(Math.random() * 49); // the first progression member is in 0..49
         int addendum = (int)((Math.random() * 99) + 1); // addendum is 0..99 + 1 (must not be zero)
-        int emptySlotIndex = (int)(Math.random() * (progressionLength - 1)); // is one of range indexes
+        int currentNumber = (int)(Math.random() * 49);
+        int emptySlotIndex = (int)(Math.random() * (progressionLength - 1));
 
         for (int i = 0; i < progressionLength; i++) {
-            var currentMember = String.valueOf(currentNumber);
+            var slotValue = String.valueOf(currentNumber);
 
             if (i == emptySlotIndex) {
-                progression[1] = currentMember;
-                currentMember = "..";
+                progression[1] = slotValue;
+                slotValue = "..";
             }
 
-            progressionString.append(currentMember);
+            progressionString.append(slotValue);
 
             if (i < (progressionLength - 1)) {
                 progressionString.append(" ");

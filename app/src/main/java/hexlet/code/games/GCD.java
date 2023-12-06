@@ -15,7 +15,7 @@ public class GCD {
 
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
-        for (var i = 0; i < roundCount; i++) {
+        for (int i = 0; i < roundCount; i++) {
             int int1 = (int)(Math.random() * 100);
             int int2 = (int)(Math.random() * 100);
             roundData[i][0] = int1 + " " + int2;
