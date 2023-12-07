@@ -10,7 +10,7 @@ public class Progression {
     private static String[] generateProgressionRound() {
 
         var progressionRound = new String[2];
-        var progressionString = new StringBuilder();
+        var stringBuilder = new StringBuilder();
 
         int length = (int) ((Math.random() * (MAX_LENGTH - MIN_LENGTH)) + MIN_LENGTH);
         int addendum = (int) (Math.random() * MAX_ADDENDUM_VALUE);
@@ -26,16 +26,16 @@ public class Progression {
                 slotValue = "..";
             }
 
-            progressionString.append(slotValue);
+            stringBuilder.append(slotValue);
 
             if (i < (length - 1)) {
-                progressionString.append(" ");
+                stringBuilder.append(" ");
                 currentNumber += addendum;
             }
 
         }
 
-        progressionRound[0] = progressionString.toString();
+        progressionRound[0] = stringBuilder.toString();
         return progressionRound;
 
     }
