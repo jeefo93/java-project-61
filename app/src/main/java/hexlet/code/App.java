@@ -16,7 +16,7 @@ public class App {
                             0 - Exit"""
         );
 
-        Scanner scanner = new Scanner(System.in);
+        var scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
         String userChoice = scanner.next();
         Invoker.playGame(userChoice);

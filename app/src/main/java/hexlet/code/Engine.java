@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Engine {
     public static void run(String[][] roundData, String rules) {
 
-        Scanner scanner = new Scanner(System.in);
+        var scanner = new Scanner(System.in);
 
         System.out.print("\nWelcome to the Brain Games!\nMay I have your name? ");
         String userName = scanner.next();

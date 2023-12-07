@@ -9,7 +9,7 @@ public class Progression {
 
     private static String[] generateProgressionRound() {
 
-        String[] progressionRound = new String[2];
+        var progressionRound = new String[2];
         var progressionString = new StringBuilder();
 
         int length = (int) ((Math.random() * (MAX_LENGTH - MIN_LENGTH)) + MIN_LENGTH);
