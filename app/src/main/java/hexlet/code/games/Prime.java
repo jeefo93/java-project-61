@@ -14,23 +14,19 @@ public class Prime {
         return true;
     }
 
-    private static int generateNumber(int startFrom, boolean mustBePrime) {
-        var resultNumber = startFrom;
-        for (int i = resultNumber; i < Integer.MAX_VALUE; i++) {
-            if (isPrime(i) == mustBePrime) {
-                resultNumber = i;
-                break;
-            }
+    private static int generateNumber(boolean mustBePrime) {
+        int number = (int) ((Math.random() * (MAX_START_VALUE - MIN_START_VALUE)) + MIN_START_VALUE);
+        while (isPrime(number) != mustBePrime) {
+            number++;
         }
-        return resultNumber;
+        return number;
     }
 
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            int startFrom = (int) ((Math.random() * (MAX_START_VALUE - MIN_START_VALUE)) + MIN_START_VALUE);
             boolean mustBePrime = (int) (Math.random() * 2) == 0;
-            roundData[i][0] = String.valueOf(generateNumber(startFrom, mustBePrime));
+            roundData[i][0] = String.valueOf(generateNumber(mustBePrime));
             roundData[i][1] = mustBePrime ? "yes" : "no";
         }
         return roundData;
