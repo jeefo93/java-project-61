@@ -14,8 +14,8 @@ public class Invoker {
         var roundData = new String[ROUND_COUNT][2];
 
         var rules = switch (gameNumber) {
-            default -> "";
             case "1" -> "Greet";
+
             case "2" -> {
                 roundData = Even.generateRoundData(ROUND_COUNT);
                 yield "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -36,6 +36,8 @@ public class Invoker {
                 roundData = Prime.generateRoundData(ROUND_COUNT);
                 yield "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
             }
+
+            default -> "";
         };
 
         if (!rules.isEmpty()) {
