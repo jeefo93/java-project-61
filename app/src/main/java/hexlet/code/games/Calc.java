@@ -7,9 +7,9 @@ public class Calc {
 
     public static String[][] generateRoundData(int roundCount) {
         var roundData = new String[roundCount][2];
+        String action;
 
         for (var i = 0; i < roundCount; i++) {
-            String action;
             int intA = (int) (Math.random() * MAX_INT_VALUE);
             int intB = (int) (Math.random() * MAX_INT_VALUE);
             int actionNumber = (int) (Math.random() * MAX_ACTION_NUMBER);
