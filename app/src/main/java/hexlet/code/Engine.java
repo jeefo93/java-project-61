@@ -15,10 +15,7 @@ public class Engine {
             }
 
             System.out.println(rules);
-
-            int lastRoundNum = roundsData.length - 1;
-            for (int i = 0; i <= lastRoundNum; i++) {
-
+            for (int i = 0; i <= roundsData.length; i++) {
                 System.out.print("Question: " + roundsData[i][0] + "\nYour answer: ");
                 String answer = scanner.next();
 
@@ -30,7 +27,6 @@ public class Engine {
                 }
 
                 System.out.println("Correct!");
-
             }
             System.out.println("Congratulations, " + userName + "!");
         }

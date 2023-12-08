@@ -10,11 +10,9 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 public class App {
-
     private static final int ROUND_COUNT = 3;
 
     public static void main(String[] args) {
-
         System.out.print("""
                 Please enter the game number and press Enter.
                 1 - Greet
@@ -28,7 +26,6 @@ public class App {
         );
 
         try (Scanner scanner = new Scanner(System.in)) {
-
             String userChoice = scanner.next();
             switch (userChoice) {
                 case "1" -> Greet.play(ROUND_COUNT);
@@ -39,7 +36,6 @@ public class App {
                 case "6" -> Prime.play(ROUND_COUNT);
                 default -> { }
             }
-
         }
     }
 }

@@ -4,7 +4,6 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
-
     private static final String RULES = "What is the result of the expression?";
     private static final int MAX_INT_VALUE = 100;
     private static final String[] ACTION_LABELS = {"+", "-", "*"};
