@@ -1,8 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
+
+    private static final String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     private static final int MAX_INT_VALUE = 100;
 
@@ -17,11 +20,11 @@ public class Even {
         return round;
     }
 
-    public static String[][] generateRoundsData(int roundCount) {
-        var roundData = new String[roundCount][2];
+    public static void play(int roundCount) {
+        var roundsData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundData[i] = generateRound();
+            roundsData[i] = generateRound();
         }
-        return roundData;
+        Engine.run(roundsData, rules);
     }
 }

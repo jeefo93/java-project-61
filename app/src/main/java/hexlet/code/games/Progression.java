@@ -1,9 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Progression {
 
+    private static final String rules = "What number is missing in the progression?";
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 12;
     private static final int MAX_ADDENDUM_VALUE = 100;
@@ -42,11 +44,11 @@ public class Progression {
 
     }
 
-    public static String[][] generateRoundsData(int roundCount) {
-        var roundData = new String[roundCount][2];
+    public static void play(int roundCount) {
+        var roundsData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundData[i] = generateRound();
+            roundsData[i] = generateRound();
         }
-        return roundData;
+        Engine.run(roundsData, rules);
     }
 }

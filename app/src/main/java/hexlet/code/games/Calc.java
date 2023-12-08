@@ -1,9 +1,11 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
 
+    private static final String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MAX_INT_VALUE = 100;
     private static final String[] ACTION_LABELS = {"+", "-", "*"};
 
@@ -33,11 +35,11 @@ public class Calc {
         return round;
     }
 
-    public static String[][] generateRoundsData(int roundCount) {
-        var roundData = new String[roundCount][2];
-        for (var i = 0; i < roundCount; i++) {
-            roundData[i] = generateRound();
+    public static void play(int roundCount) {
+        var roundsData = new String[roundCount][2];
+        for (int i = 0; i < roundCount; i++) {
+            roundsData[i] = generateRound();
         }
-        return roundData;
+        Engine.run(roundsData, rules);
     }
 }
