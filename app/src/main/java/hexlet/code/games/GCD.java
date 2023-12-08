@@ -19,16 +19,23 @@ public class GCD {
         return gcd;
     }
 
-    public static String[][] generateRoundData(int roundCount) {
+    private static String[] generateRound() {
+        var round = new String[2];
+
+        int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
+        int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
+
+        round[0] = intA + " " + intB;
+        round[1] = String.valueOf(getGcd(intA, intB));
+
+        return round;
+    }
+
+    public static String[][] generateRoundsData(int roundCount) {
         var roundData = new String[roundCount][2];
-
         for (int i = 0; i < roundCount; i++) {
-            int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
-            int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
-            roundData[i][0] = intA + " " + intB;
-            roundData[i][1] = String.valueOf(getGcd(intA, intB));
+            roundData[i] = generateRound();
         }
-
         return roundData;
     }
 }

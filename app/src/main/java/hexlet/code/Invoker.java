@@ -17,23 +17,23 @@ public class Invoker {
             case "1" -> "Greet";
 
             case "2" -> {
-                roundData = Even.generateRoundData(ROUND_COUNT);
+                roundData = Even.generateRoundsData(ROUND_COUNT);
                 yield "Answer 'yes' if the number is even, otherwise answer 'no'.";
             }
             case "3" -> {
-                roundData = Calc.generateRoundData(ROUND_COUNT);
+                roundData = Calc.generateRoundsData(ROUND_COUNT);
                 yield "What is the result of the expression?";
             }
             case "4" -> {
-                roundData = GCD.generateRoundData(ROUND_COUNT);
+                roundData = GCD.generateRoundsData(ROUND_COUNT);
                 yield "Find the greatest common divisor of given numbers.";
             }
             case "5" -> {
-                roundData = Progression.generateRoundData(ROUND_COUNT);
+                roundData = Progression.generateRoundsData(ROUND_COUNT);
                 yield "What number is missing in the progression?";
             }
             case "6" -> {
-                roundData = Prime.generateRoundData(ROUND_COUNT);
+                roundData = Prime.generateRoundsData(ROUND_COUNT);
                 yield "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
             }
 

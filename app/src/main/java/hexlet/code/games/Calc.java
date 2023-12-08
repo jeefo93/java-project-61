@@ -5,31 +5,38 @@ import hexlet.code.Utils;
 public class Calc {
 
     private static final int MAX_INT_VALUE = 100;
-    private static final String[] ACTIONS = {"+", "-", "*"};
+    private static final String[] ACTION_LABELS = {"+", "-", "*"};
 
     private static int getActionResult(int intA, int intB, String actionLabel) {
         return switch (actionLabel) {
+
             case "+" -> intA + intB;
             case "-" -> intA - intB;
             default -> intA * intB;
+
         };
     }
 
-    public static String[][] generateRoundData(int roundCount) {
+    private static String[] generateRound() {
+        var round = new String[2];
+
+        int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
+        int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
+
+        int actionIndex = Utils.getRandomInt(0, (ACTION_LABELS.length - 1));
+        var actionLabel = ACTION_LABELS[actionIndex];
+        int actionResult = getActionResult(intA, intB, actionLabel);
+
+        round[0] = intA + " " + actionLabel + " " + intB;
+        round[1] = String.valueOf(actionResult);
+
+        return round;
+    }
+
+    public static String[][] generateRoundsData(int roundCount) {
         var roundData = new String[roundCount][2];
-
         for (var i = 0; i < roundCount; i++) {
-
-            int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
-            int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
-
-            int actionNumber = Utils.getRandomInt(0, (ACTIONS.length - 1));
-            var actionLabel = ACTIONS[actionNumber];
-            int actionResult = getActionResult(intA, intB, actionLabel);
-
-            roundData[i][0] = intA + " " + actionLabel + " " + intB;
-            roundData[i][1] = String.valueOf(actionResult);
-
+            roundData[i] = generateRound();
         }
         return roundData;
     }

@@ -25,12 +25,20 @@ public class Prime {
         return number;
     }
 
-    public static String[][] generateRoundData(int roundCount) {
+    private static String[] generateRound() {
+        var round = new String[2];
+
+        boolean mustBePrime = Utils.getRandomInt(0, PRIME_RANDOMIZER_RANGE) == 0;
+        round[0] = String.valueOf(generateNumber(mustBePrime));
+        round[1] = mustBePrime ? "yes" : "no";
+
+        return round;
+    }
+
+    public static String[][] generateRoundsData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            boolean mustBePrime = Utils.getRandomInt(0, PRIME_RANDOMIZER_RANGE) == 0;
-            roundData[i][0] = String.valueOf(generateNumber(mustBePrime));
-            roundData[i][1] = mustBePrime ? "yes" : "no";
+            roundData[i] = generateRound();
         }
         return roundData;
     }

@@ -9,9 +9,9 @@ public class Progression {
     private static final int MAX_ADDENDUM_VALUE = 100;
     private static final int MAX_START_NUMBER_VALUE = 49;
 
-    private static String[] generateProgressionRound() {
+    private static String[] generateRound() {
 
-        var progressionRound = new String[2];
+        var round = new String[2];
         var stringBuilder = new StringBuilder();
 
         int length = Utils.getRandomInt(MIN_LENGTH, MAX_LENGTH);
@@ -24,7 +24,7 @@ public class Progression {
             var slotValue = String.valueOf(currentNumber);
 
             if (i == emptySlotIndex) {
-                progressionRound[1] = slotValue;
+                round[1] = slotValue;
                 slotValue = "..";
             }
 
@@ -37,15 +37,15 @@ public class Progression {
 
         }
 
-        progressionRound[0] = stringBuilder.toString();
-        return progressionRound;
+        round[0] = stringBuilder.toString();
+        return round;
 
     }
 
-    public static String[][] generateRoundData(int roundCount) {
+    public static String[][] generateRoundsData(int roundCount) {
         var roundData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundData[i] = generateProgressionRound();
+            roundData[i] = generateRound();
         }
         return roundData;
     }
