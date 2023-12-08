@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class GCD {
 
     private static final int MAX_INT_VALUE = 100;
@@ -21,8 +23,8 @@ public class GCD {
         var roundData = new String[roundCount][2];
 
         for (int i = 0; i < roundCount; i++) {
-            int intA = (int) (Math.random() * MAX_INT_VALUE);
-            int intB = (int) (Math.random() * MAX_INT_VALUE);
+            int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
+            int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
             roundData[i][0] = intA + " " + intB;
             roundData[i][1] = String.valueOf(getGcd(intA, intB));
         }

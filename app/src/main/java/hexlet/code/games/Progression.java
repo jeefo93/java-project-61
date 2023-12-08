@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import hexlet.code.Utils;
+
 public class Progression {
 
     private static final int MIN_LENGTH = 5;
@@ -12,10 +14,10 @@ public class Progression {
         var progressionRound = new String[2];
         var stringBuilder = new StringBuilder();
 
-        int length = (int) ((Math.random() * (MAX_LENGTH - MIN_LENGTH)) + MIN_LENGTH);
-        int addendum = (int) (Math.random() * MAX_ADDENDUM_VALUE);
-        int currentNumber = (int) (Math.random() * MAX_START_NUMBER_VALUE);
-        int emptySlotIndex = (int) (Math.random() * (length - 1));
+        int length = Utils.getRandomInt(MIN_LENGTH, MAX_LENGTH);
+        int addendum = Utils.getRandomInt(0, MAX_ADDENDUM_VALUE);
+        int currentNumber = Utils.getRandomInt(0, MAX_START_NUMBER_VALUE);
+        int emptySlotIndex = Utils.getRandomInt(0, (length - 1));
 
         for (int i = 0; i < length; i++) {
 
