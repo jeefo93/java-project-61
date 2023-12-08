@@ -12,36 +12,24 @@ public class Progression {
     private static final int MAX_START_NUMBER_VALUE = 49;
 
     private static String[] generateRound() {
-
         var round = new String[2];
-        var stringBuilder = new StringBuilder();
 
         int length = Utils.getRandomInt(MIN_LENGTH, MAX_LENGTH);
+        var progression = new String[length];
         int addendum = Utils.getRandomInt(0, MAX_ADDENDUM_VALUE);
         int currentNumber = Utils.getRandomInt(0, MAX_START_NUMBER_VALUE);
         int emptySlotIndex = Utils.getRandomInt(0, (length - 1));
 
         for (int i = 0; i < length; i++) {
-
-            var slotValue = String.valueOf(currentNumber);
-
-            if (i == emptySlotIndex) {
-                round[1] = slotValue;
-                slotValue = "..";
-            }
-
-            stringBuilder.append(slotValue);
-
-            if (i < (length - 1)) {
-                stringBuilder.append(" ");
-                currentNumber += addendum;
-            }
-
+            progression[i] = String.valueOf(currentNumber);
+            currentNumber += addendum;
         }
 
-        round[0] = stringBuilder.toString();
-        return round;
+        round[1] = progression[emptySlotIndex];
+        progression[emptySlotIndex] = "..";
+        round[0] = String.join(" ", progression);
 
+        return round;
     }
 
     public static void play(int roundCount) {
