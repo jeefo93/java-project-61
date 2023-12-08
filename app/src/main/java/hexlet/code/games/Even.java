@@ -7,21 +7,21 @@ public class Even {
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static final int MAX_INT_VALUE = 100;
 
-    private static String[] generateRound() {
-        var round = new String[2];
+    private static String[] generateRoundData() {
+        var roundData = new String[2];
 
         int currentInt = Utils.getRandomInt(0, MAX_INT_VALUE);
 
-        round[0] = String.valueOf(currentInt);
-        round[1] = ((currentInt % 2) == 0) ? "yes" : "no";
+        roundData[0] = String.valueOf(currentInt);
+        roundData[1] = ((currentInt % 2) == 0) ? "yes" : "no";
 
-        return round;
+        return roundData;
     }
 
     public static void play(int roundCount) {
         var roundsData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundsData[i] = generateRound();
+            roundsData[i] = generateRoundData();
         }
         Engine.run(roundsData, RULES);
     }

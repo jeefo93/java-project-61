@@ -18,8 +18,8 @@ public class Calc {
         };
     }
 
-    private static String[] generateRound() {
-        var round = new String[2];
+    private static String[] generateRoundData() {
+        var roundData = new String[2];
 
         int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
         int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
@@ -28,16 +28,16 @@ public class Calc {
         var actionLabel = ACTION_LABELS[actionIndex];
         int actionResult = getActionResult(intA, intB, actionLabel);
 
-        round[0] = intA + " " + actionLabel + " " + intB;
-        round[1] = String.valueOf(actionResult);
+        roundData[0] = intA + " " + actionLabel + " " + intB;
+        roundData[1] = String.valueOf(actionResult);
 
-        return round;
+        return roundData;
     }
 
     public static void play(int roundCount) {
         var roundsData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundsData[i] = generateRound();
+            roundsData[i] = generateRoundData();
         }
         Engine.run(roundsData, RULES);
     }

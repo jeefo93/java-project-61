@@ -26,20 +26,20 @@ public class Prime {
         return number;
     }
 
-    private static String[] generateRound() {
-        var round = new String[2];
+    private static String[] generateRoundData() {
+        var roundData = new String[2];
 
         boolean mustBePrime = Utils.getRandomInt(0, PRIME_RANDOMIZER_RANGE) == 0;
-        round[0] = String.valueOf(generateNumber(mustBePrime));
-        round[1] = mustBePrime ? "yes" : "no";
+        roundData[0] = String.valueOf(generateNumber(mustBePrime));
+        roundData[1] = mustBePrime ? "yes" : "no";
 
-        return round;
+        return roundData;
     }
 
     public static void play(int roundCount) {
         var roundsData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundsData[i] = generateRound();
+            roundsData[i] = generateRoundData();
         }
         Engine.run(roundsData, RULES);
     }

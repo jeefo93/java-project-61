@@ -20,22 +20,22 @@ public class GCD {
         return gcd;
     }
 
-    private static String[] generateRound() {
-        var round = new String[2];
+    private static String[] generateRoundData() {
+        var roundData = new String[2];
 
         int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
         int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
 
-        round[0] = intA + " " + intB;
-        round[1] = String.valueOf(getGcd(intA, intB));
+        roundData[0] = intA + " " + intB;
+        roundData[1] = String.valueOf(getGcd(intA, intB));
 
-        return round;
+        return roundData;
     }
 
     public static void play(int roundCount) {
         var roundsData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundsData[i] = generateRound();
+            roundsData[i] = generateRoundData();
         }
         Engine.run(roundsData, RULES);
     }

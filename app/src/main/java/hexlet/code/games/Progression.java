@@ -10,8 +10,8 @@ public class Progression {
     private static final int MAX_ADDENDUM_VALUE = 100;
     private static final int MAX_START_NUMBER_VALUE = 49;
 
-    private static String[] generateRound() {
-        var round = new String[2];
+    private static String[] generateRoundData() {
+        var roundData = new String[2];
 
         int length = Utils.getRandomInt(MIN_LENGTH, MAX_LENGTH);
         var progression = new String[length];
@@ -24,17 +24,17 @@ public class Progression {
             currentNumber += addendum;
         }
 
-        round[1] = progression[emptySlotIndex];
+        roundData[1] = progression[emptySlotIndex];
         progression[emptySlotIndex] = "..";
-        round[0] = String.join(" ", progression);
+        roundData[0] = String.join(" ", progression);
 
-        return round;
+        return roundData;
     }
 
     public static void play(int roundCount) {
         var roundsData = new String[roundCount][2];
         for (int i = 0; i < roundCount; i++) {
-            roundsData[i] = generateRound();
+            roundsData[i] = generateRoundData();
         }
         Engine.run(roundsData, RULES);
     }

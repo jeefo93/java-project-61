@@ -15,13 +15,13 @@ public class Engine {
             }
 
             System.out.println(rules);
-            for (int i = 0; i <= roundsData.length; i++) {
-                System.out.print("Question: " + roundsData[i][0] + "\nYour answer: ");
+            for (String[] roundData : roundsData) {
+                System.out.print("Question: " + roundData[0] + "\nYour answer: ");
                 String answer = scanner.next();
 
-                if (!answer.equals(roundsData[i][1])) {
+                if (!answer.equals(roundData[1])) {
                     System.out.println("'" + answer + "' "
-                            + "is wrong answer ;(. Correct answer was '" + roundsData[i][1] + "'.\n"
+                            + "is wrong answer ;(. Correct answer was '" + roundData[1] + "'.\n"
                             + "Let's try again, " + userName + "!");
                     return;
                 }
