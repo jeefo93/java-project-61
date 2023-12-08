@@ -28,11 +28,9 @@ public class Prime {
 
     private static String[] generateRoundData() {
         var roundData = new String[2];
-
         boolean mustBePrime = Utils.getRandomInt(0, PRIME_RANDOMIZER_RANGE) == 0;
         roundData[0] = String.valueOf(generateNumber(mustBePrime));
         roundData[1] = mustBePrime ? "yes" : "no";
-
         return roundData;
     }
 

@@ -10,11 +10,9 @@ public class Calc {
 
     private static int getActionResult(int intA, int intB, String actionLabel) {
         return switch (actionLabel) {
-
             case "+" -> intA + intB;
             case "-" -> intA - intB;
             default -> intA * intB;
-
         };
     }
 
@@ -23,14 +21,12 @@ public class Calc {
 
         int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
         int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
-
         int actionIndex = Utils.getRandomInt(0, (ACTION_LABELS.length - 1));
         var actionLabel = ACTION_LABELS[actionIndex];
         int actionResult = getActionResult(intA, intB, actionLabel);
 
         roundData[0] = intA + " " + actionLabel + " " + intB;
         roundData[1] = String.valueOf(actionResult);
-
         return roundData;
     }
 

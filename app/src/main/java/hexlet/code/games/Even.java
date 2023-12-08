@@ -9,7 +9,6 @@ public class Even {
 
     private static String[] generateRoundData() {
         var roundData = new String[2];
-
         int currentInt = Utils.getRandomInt(0, MAX_INT_VALUE);
 
         roundData[0] = String.valueOf(currentInt);

@@ -27,7 +27,6 @@ public class Progression {
         roundData[1] = progression[emptySlotIndex];
         progression[emptySlotIndex] = "..";
         roundData[0] = String.join(" ", progression);
-
         return roundData;
     }
 

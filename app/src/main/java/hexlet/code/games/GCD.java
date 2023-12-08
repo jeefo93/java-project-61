@@ -10,19 +10,16 @@ public class GCD {
     private static int getGcd(int intA, int intB) {
         int max = Math.max(intA, intB);
         int gcd = (max == 0) ? 0 : 1;
-
         for (int i = 1; i <= max; i++) {
             if (intA % i == 0 && intB % i == 0) {
                 gcd = i;
             }
         }
-
         return gcd;
     }
 
     private static String[] generateRoundData() {
         var roundData = new String[2];
-
         int intA = Utils.getRandomInt(0, MAX_INT_VALUE);
         int intB = Utils.getRandomInt(0, MAX_INT_VALUE);
 
