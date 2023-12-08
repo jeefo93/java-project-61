@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Progression {
 
-    private static final String rules = "What number is missing in the progression?";
+    private static final String RULES = "What number is missing in the progression?";
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 12;
     private static final int MAX_ADDENDUM_VALUE = 100;
@@ -37,6 +37,6 @@ public class Progression {
         for (int i = 0; i < roundCount; i++) {
             roundsData[i] = generateRound();
         }
-        Engine.run(roundsData, rules);
+        Engine.run(roundsData, RULES);
     }
 }

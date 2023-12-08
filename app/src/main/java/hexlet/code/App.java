@@ -37,7 +37,7 @@ public class App {
                 case "4" -> GCD.play(ROUND_COUNT);
                 case "5" -> Progression.play(ROUND_COUNT);
                 case "6" -> Prime.play(ROUND_COUNT);
-                default -> {}
+                default -> { }
             }
 
         }

@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Prime {
 
-    private static final String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MIN_START_VALUE = 1;
     private static final int MAX_START_VALUE = 500;
     private static final int PRIME_RANDOMIZER_RANGE = 3;
@@ -42,6 +42,6 @@ public class Prime {
         for (int i = 0; i < roundCount; i++) {
             roundsData[i] = generateRound();
         }
-        Engine.run(roundsData, rules);
+        Engine.run(roundsData, RULES);
     }
 }

@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Calc {
 
-    private static final String rules = "What is the result of the expression?";
+    private static final String RULES = "What is the result of the expression?";
     private static final int MAX_INT_VALUE = 100;
     private static final String[] ACTION_LABELS = {"+", "-", "*"};
 
@@ -40,6 +40,6 @@ public class Calc {
         for (int i = 0; i < roundCount; i++) {
             roundsData[i] = generateRound();
         }
-        Engine.run(roundsData, rules);
+        Engine.run(roundsData, RULES);
     }
 }

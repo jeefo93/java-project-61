@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Even {
 
-    private static final String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     private static final int MAX_INT_VALUE = 100;
 
@@ -25,6 +25,6 @@ public class Even {
         for (int i = 0; i < roundCount; i++) {
             roundsData[i] = generateRound();
         }
-        Engine.run(roundsData, rules);
+        Engine.run(roundsData, RULES);
     }
 }
