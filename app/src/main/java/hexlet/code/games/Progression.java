@@ -7,6 +7,7 @@ public class Progression {
     private static final String RULES = "What number is missing in the progression?";
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 12;
+    private static final int MIN_ADDENDUM_VALUE = 1;
     private static final int MAX_ADDENDUM_VALUE = 100;
     private static final int MAX_START_NUMBER_VALUE = 49;
 
@@ -15,7 +16,7 @@ public class Progression {
 
         int length = Utils.getRandomInt(MIN_LENGTH, MAX_LENGTH);
         var progression = new String[length];
-        int addendum = Utils.getRandomInt(0, MAX_ADDENDUM_VALUE);
+        int addendum = Utils.getRandomInt(MIN_ADDENDUM_VALUE, MAX_ADDENDUM_VALUE);
         int currentNumber = Utils.getRandomInt(0, MAX_START_NUMBER_VALUE);
         int emptySlotIndex = Utils.getRandomInt(0, (length - 1));
 
